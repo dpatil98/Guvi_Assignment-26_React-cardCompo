@@ -1,38 +1,153 @@
 .App {
+  /* text-align: center; */
+}
+
+ul
+{
+
+  text-decoration: none;
+  list-style: none ;
+
+}
+
+
+.cards-container{
+ 
+  margin:150px min(150px,8%);
+  /* background: #007bff; */
+  background: linear-gradient(to right, #0062E6, #33AEFF);
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-evenly;
+
+  padding: 50px 0;
+}
+
+.card{
+  
+  padding: 20px 0;
+  width: min(320px,95vw);
+  /* height: 540px; */
+
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+  background-color: rgb(241, 247, 247);
+
+  transition: 0.1s all linear;
+}
+
+.card:hover{
+
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  transform: translate(0 ,-5px);
+}
+
+.card:hover .btn{
+
+  background: #0b75ff;
+}
+
+.card-header{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+
+  /* padding: 5px 0; */
+
+}
+
+.card-title{
+  color: rgba(128, 128, 128, 0.8);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.card-price{
+
+  /* background-color: #0062E6; */
+  padding: 0%;
+  margin: 0%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+
+}
+
+/* price number */
+.card-price h1{
+  
+  margin: 0%;
+
+  font-size: 50px;
+  font-weight: 500;
+  
+}
+
+/* price per month tag */
+.card-price p{
+
+  font-size: 14px;
+  font-weight: 600;
+  
+}
+
+.not-availble:before {
+
+  /* content: '✓'; */
+  content:"\2716\0020";
+  font-weight: 800;
+}
+
+.availble:before {
+  font-weight: 800;
+  content:"\2714\0020";
+}
+
+.not-availble{
+  /* color: gray; */
+  opacity: 0.5;
+}
+
+.not-availble , .availble{
+  
+  margin: 15px 0;
+
+}
+
+.btn-container{
+
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn{
+
+  border: none;
+  outline: none;
+
+  width: 90%;
+  height: 50px;
+  
+  color: rgba(255, 255, 255, 0.9);
+  background: #4693f7;
+
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+  border-radius: 50px;
+
+ cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* overwriting btn hover effect */
+.card:hover .btn:hover{
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  background: #1065d5;
 }
